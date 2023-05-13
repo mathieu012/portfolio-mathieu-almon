@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Georgia, serif; font-size: 12pt;}
+
+// Surcharge color list material angular
+.mat-icon.notranslate.mat-mdc-list-item-icon.material-icons.mat-ligature-font.mat-icon-no-color.mdc-list-item__start{
+  color: black;
+}
+.mat-mdc-list-item-line.mdc-list-item__secondary-text{
+  color: black;
+}
