@@ -4,17 +4,17 @@
       <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title>
-            Expérience
+            Expériences
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
           <span *ngFor="let experience of experiences">
             <mat-divider ></mat-divider><br>
             <p>
-            Poste : {{experience.poste}}<br>
-            Client : {{experience.client}}<br>
-            Période : {{experience.periode}}<br>
-            Projet : {{experience.projet}}<br><br>
+            <b>Poste</b> : {{experience.poste}}<br>
+            <b>Client</b> : {{experience.client}}<br>
+            <b>Période</b> : {{experience.periode}}<br>
+            <b>Projet</b> : {{experience.projet}}<br><br>
             {{experience.description}}
             </p>
           </span>
@@ -30,12 +30,14 @@
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
         <mat-divider ></mat-divider><br>
-        <p>2022<br>
-        Ecole Supérieure du Numérique du Tarn<br>
-        Manager de solutions digitales et data</p>
-        <p>2020<br>
-        ORT France<br>
-        Licence Concepteur de System d’Information</p>
+        <p>
+        <b>Manager de solutions digitales et data</b><br>
+        Ecole Supérieure du Numérique du Tarn <br>
+        2020-2022
+        </p>
+        <p><b>Licence Concepteur de Systemes d’Informations</b><br>
+        ORT Toulouse<br>
+        2019-2020</p>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
@@ -43,14 +45,14 @@
       <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title>
-            Loisir
+            Loisirs
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
           <mat-list>
           <mat-list-item>
             <mat-icon  matListItemIcon>flight_takeoff</mat-icon>
-            <span matListItemLine>Voyager à travers l'europe</span>
+            <span matListItemLine>Voyager à travers l'Europe</span>
           </mat-list-item>
           <mat-list-item>
             <mat-icon matListItemIcon>terminal</mat-icon>
@@ -58,7 +60,7 @@
           </mat-list-item>
           <mat-list-item>
             <mat-icon matListItemIcon>hiking</mat-icon>
-            <span matListItemLine>Randonée de montagne</span>
+            <span matListItemLine>Randonée pédestre</span>
           </mat-list-item>
         </mat-list>
         </mat-card-content>
