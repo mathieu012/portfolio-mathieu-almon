@@ -33,7 +33,7 @@ jobs:
                     command: |
                       mkdir /tmp/artifacts;
                       cp dist/portfolio-mathieu-almon > /tmp/artifacts;
-                - store_artifacts:
+                 - store_artifacts:
                     path: /tmp/artifacts
 
 # Orchestrate jobs using workflows
