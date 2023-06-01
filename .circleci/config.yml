@@ -35,6 +35,18 @@ jobs:
                       cp -r dist/portfolio-mathieu-almon /tmp/artifacts;
                 - store_artifacts:
                     path: /tmp/artifacts
+  deploy:
+    docker:
+      - image: cimg/node:20.2.0
+        # Add steps to the job
+        # See: https://circleci.com/docs/configuration-reference/#steps
+    steps:
+                - run:
+                    name: Show current branch
+                    command: ftp-upload -h ${HOST_FTP} -u ${LOGIN_FTP} --password ${PASSWORD_FTP} -d /wwww /tmp/artifacts
+                # Install project dependencies
+
+
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
@@ -42,3 +54,4 @@ workflows:
   build-workflow:
     jobs:
       - build
+      - deploy
