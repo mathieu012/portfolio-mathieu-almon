@@ -32,7 +32,7 @@ jobs:
                     name: Creating Dummy Artifacts
                     command: |
                       mkdir /tmp/artifacts;
-                      cp dist/portfolio-mathieu-almon > /tmp/artifacts;
+                      cp dist/portfolio-mathieu-almon /tmp/artifacts;
                 - store_artifacts:
                     path: /tmp/artifacts
 
