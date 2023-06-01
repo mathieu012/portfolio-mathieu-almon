@@ -23,7 +23,18 @@ jobs:
                 - run:
                     name: Install local dependencies
                     command: npm install
+                # Build Angular
+                 - run:
+                    name: Install local dependencies
+                    command: npm run build
                 # Test the source code
+                 - run:
+                    name: Creating Dummy Artifacts
+                    command: |
+                      mkdir /tmp/artifacts;
+                      cp dist/portfolio-mathieu-almon > /tmp/artifacts;
+                - store_artifacts:
+                    path: /tmp/artifacts
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
