@@ -24,16 +24,16 @@ jobs:
                     name: Install local dependencies
                     command: npm install
                 # Build Angular
-                 - run:
+                - run:
                     name: Install local dependencies
                     command: npm run build
                 # Test the source code
-                 - run:
+                - run:
                     name: Creating Dummy Artifacts
                     command: |
                       mkdir /tmp/artifacts;
                       cp dist/portfolio-mathieu-almon > /tmp/artifacts;
-                 - store_artifacts:
+                - store_artifacts:
                     path: /tmp/artifacts
 
 # Orchestrate jobs using workflows
