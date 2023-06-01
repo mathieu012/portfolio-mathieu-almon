@@ -37,7 +37,7 @@ jobs:
                     path: /tmp/artifacts
   deploy:
     docker:
-      - image: cimg/node:20.2.0
+      - image: jlesage/filezilla
         # Add steps to the job
         # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
